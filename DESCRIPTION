@@ -4,12 +4,10 @@ Title: Normality test based on equivalence approach
 Version: 1.0.0
 Author: Pablo Flores
 Maintainer: Pablo Flores <p_flores@espoch.edu.ec>
-Description: This package contains functions that 
-    allow to replicate results obtained in the paper 
-    "Goodness and Lack of fit in normality when means comparison tests" 
-    to measure the effectiveness between a 
-    pretest of goodness and lack of fit to 
-    detect normality for a comparison means test
+Description: This package contains functions that  allow to replicate results 
+    obtained in  paper "Goodness and Lack of fit to prove normality when means 
+    comparison tests" to measure the effectiveness of a goodness and lack of fit 
+    pretests to  detect normality for a comparison means test.
 Depends: BinNonNor
 License: GPL-3
 Encoding: UTF-8
