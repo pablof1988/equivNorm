@@ -1,7 +1,7 @@
 # equivNorm
 This R package implements methods to prove normality (or even another distributions) using an equivalence approach. Simulation functions can be used to measure the effectiveness (in terms of Type One Error Probability and Power) of pretest to prove normality when testing means difference, in addtition the robustness of t-Student and Wilcoxon text can be obtained
 
-The main purpose of this package is show the functions who computed the results of the paper __Goodness and Lack of fit to prove normality when means comparison tests__
+The main purpose of this package is show the functions who computed the results of the paper __Goodness and Lack of fit to pretest normality when means comparison tests__
 
 
 ## Installation instructions
