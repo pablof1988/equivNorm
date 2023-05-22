@@ -5,7 +5,7 @@ The main purpose of this package is show the functions who computed the results 
 
 
 ## Installation instructions
-goSorensen package has to be installed with a working R version (>=4.2.0). Installation could take a few minutes on a regular desktop or laptop. Package can be installed from `devtools` package, then it needs to be loaded using `library(equivNorm)`
+equivNorm package has to be installed with a working R version (>=4.2.0). Installation could take a few minutes on a regular desktop or laptop. Package can be installed from `devtools` package, then it needs to be loaded using `library(equivNorm)`
 
 
 To install from Github
