@@ -40,8 +40,9 @@ An estimation of Type I Error Probability TIEP (if diffMean = 0) or Power
 Simulation function to compute the proportion of rejections of H0 for four
 comparisson mean tests: i) t-student direct (without pretest), ii) wilcoxon
 direct (without pretest), iii) t-student or wilcoxon depending of chi-square
-(goodnes of fit) pretest for normality and iv) t-student or wilcoxon depending
-of equivalence (lack of fit) pretest for normality
+(goodnes of fit) pretest for normality, iv) t-student or wilcoxon depending
+of Shapiro-Wilk (goodnes of fit) pretest for normality and v) t-student or
+wilcoxon depending of equivalence (lack of fit) pretest for normality
 }
 \details{
 when  \code{diffMean} is 0, function computes rejections proportions of

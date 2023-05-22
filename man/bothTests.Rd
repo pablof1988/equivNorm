@@ -2,7 +2,7 @@
 % Please edit documentation in R/bothTests.R
 \name{bothTests}
 \alias{bothTests}
-\title{Both, Chi square and equivalence tests to detect normality}
+\title{Both, Traditionl (Chi square & Shapiro Wilk) and equivalence tests to detect normality}
 \usage{
 bothTests(x, mu = 0, sigma = 1, alpha = 0.05, epsilon = 0.4)
 }
@@ -18,12 +18,13 @@ bothTests(x, mu = 0, sigma = 1, alpha = 0.05, epsilon = 0.4)
 \item{epsilon}{Irrelevance/Equivalence limit.}
 }
 \value{
-logical (TRUE if normality is detected, FALSE if not) value to both, chi-square
-and equivalence normality test. In addition, p-value (for chi square) and Upper
+logical (TRUE if normality is detected, FALSE if not) value to, chi-square,
+Shapiro - Wilk and equivalence normality test.
+In addition, p-value (for chi square) and Upper
 limit with \eqn{\epsilon^2} (for equivalence) are shown as attribute.
 }
 \description{
-Chi square (goodnes of fit) and equivalence test (lack of fit) to detect
+Chi square & Shapiro Wilk (goodnes of fit) and equivalence test (lack of fit) to detect
 normality
 }
 \details{

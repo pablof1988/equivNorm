@@ -1,6 +1,6 @@
-#' Both, Chi square and equivalence tests to detect normality
+#' Both, Traditionl (Chi square & Shapiro Wilk) and equivalence tests to detect normality
 #'
-#' Chi square (goodnes of fit) and equivalence test (lack of fit) to detect
+#' Chi square & Shapiro Wilk (goodnes of fit) and equivalence test (lack of fit) to detect
 #' normality
 #'
 #' @param x A numeric vector with sample data.
@@ -11,8 +11,9 @@
 #'
 #'
 #' @return
-#' logical (TRUE if normality is detected, FALSE if not) value to both, chi-square
-#' and equivalence normality test. In addition, p-value (for chi square) and Upper
+#' logical (TRUE if normality is detected, FALSE if not) value to, chi-square,
+#' Shapiro - Wilk and equivalence normality test.
+#' In addition, p-value (for chi square) and Upper
 #' limit with \eqn{\epsilon^2} (for equivalence) are shown as attribute.
 #'
 #' @details
@@ -62,6 +63,8 @@ bothTests <- function(x, mu = 0, sigma = 1, alpha = 0.05, epsilon = 0.4){
   chi <- sum((afr - (theoretical*n))^2 / (theoretical*n))
   pvalchi <- pchisq(chi, k - 1, lower.tail = F)
 
+  pvalsw <- shapiro.test(x)$p.val
+
   de <- afr / n
   deuc <- sum((de - theoretical)^2)
 
@@ -78,7 +81,8 @@ bothTests <- function(x, mu = 0, sigma = 1, alpha = 0.05, epsilon = 0.4){
   lupp <- deuc + (u * ee)
 
   res <- c('X2Test' = ifelse(pvalchi >= alpha, T, F),
+           'swTest' = ifelse(pvalsw >= alpha, T, F),
            'equivTest' = ifelse(lupp < epsilon^2, T, F))
-  attr(res, "P-value, Upper Limit, eps^2") <- c(pvalchi, lupp, epsilon^2)
+  attr(res, "Pval-Chi2, Pval-SW, Upper Limit, eps^2") <- c(pvalchi, pvalsw, lupp, epsilon^2)
   res
 }
